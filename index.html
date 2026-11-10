@@ -171,19 +171,27 @@
             background: rgba(255, 255, 255, 0.3);
         }
 
-        /* Lapisan antarmuka dibuat solid agar menu, tabel, dan tulisan selalu jelas.
-           Foto latar tetap asli dan tidak diberi filter atau overlay. */
-        .glass-panel,
-        .glass-card {
-            background: #111827 !important;
+        /* Dashboard semi-transparan: alpha 0.75 (75% opak).
+           Transparansi diterapkan pada latar, bukan opacity elemen,
+           sehingga tulisan, ikon, dan tombol tetap tajam. */
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.75) !important;
             background-image: none !important;
-            backdrop-filter: none !important;
-            -webkit-backdrop-filter: none !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            opacity: 1 !important;
+        }
+
+        .glass-card {
+            background: rgba(17, 24, 39, 0.75) !important;
+            background-image: none !important;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             opacity: 1 !important;
         }
 
         .glass-input {
-            background: #0f172a !important;
+            background: rgba(15, 23, 42, 0.75) !important;
             opacity: 1 !important;
             color: #ffffff !important;
         }
@@ -198,20 +206,20 @@
             opacity: 1;
         }
         table {
-            background-color: #111827 !important;
+            background-color: rgba(17, 24, 39, 0.75) !important;
         }
         thead th {
-            background-color: #0b1220 !important;
+            background-color: rgba(11, 18, 32, 0.78) !important;
             color: #ffffff !important;
         }
         tbody tr,
         tbody td {
-            background-color: #1f2937 !important;
+            background-color: rgba(31, 41, 55, 0.75) !important;
             color: #f9fafb !important;
         }
         tbody tr:nth-child(even),
         tbody tr:nth-child(even) td {
-            background-color: #263244 !important;
+            background-color: rgba(38, 50, 68, 0.75) !important;
         }
 
         /* PRINT MEDIA ENGINE (RESPECT FORMAL LEGAL STANDARDS) */
